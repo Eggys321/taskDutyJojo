@@ -31,7 +31,7 @@ const getTask = async (req, res) => {
   
       res.status(200).json({ success: "true", message: "all task(s)", tasks });
     } catch (error) {
-      res.status(500).json(error);
+      res.status(500).json(error); 
     }
   }
 
