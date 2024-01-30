@@ -5,15 +5,18 @@ const port = process.env.PORT || 6767;
 const connect = require("./config/db");
 const TASKS = require("./model/taskModel");
 const taskRouter = require('./routes/taskRouter');
+const userRouter = require('./routes/userRouter')
 const cors = require('cors')
+const morgan = require('morgan')
 
 // middleware
 app.use(cors())
 app.use(express.json());
-
+app.use(morgan('dev'))
 // API's
 
 app.use('/api',taskRouter)
+app.use('/api',userRouter)
 
 
 

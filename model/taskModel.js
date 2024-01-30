@@ -14,6 +14,11 @@ const taskSchema = new Schema({
         type:String,
         enum:['important','urgent'],
         required:true
+    },
+    createdBy:{
+        type:mongoose.Types.ObjectId,
+        ref:"User",
+        required:true
     }
 },{timestamps:true})
 
