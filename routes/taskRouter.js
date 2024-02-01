@@ -16,7 +16,7 @@ router.post("/task",auth,createTask);
 
 // router.get("/task",getTask);
 
-// ALl tasks by a user
+// All tasks by a user
 router.get('/task/:userId',auth,getAllTasksByUser)
 
 // update request, U -- for update in CRUD operations
@@ -26,6 +26,6 @@ router.patch("/task/:taskId",auth,updateTask );
 router.delete("/task/:taskId",auth, deleteTask);
 
 // params for single task
-router.get("/task/:taskId",auth,singleTask);
+router.get("/singletask/:taskId",auth,singleTask);
 
 module.exports = router;
